@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
 
 /**
  * check_cycle - check if a singly linked list has a cycle
@@ -18,11 +15,11 @@ int check_cycle(listint_t *list)
 	fast = list;
 
 	do {
-		slow = slow->next;
-		if (fast->next)
-			fast = fast->next->next;
+	       	slow = slow->next;
+	       	fast = fast->next->next;
+
 		if (slow == fast)
 			return (1);
-	} while (slow && fast);
+	} while (slow && fast && fast->next);
 	return (0);
 }
