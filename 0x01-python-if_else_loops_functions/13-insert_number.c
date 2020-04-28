@@ -1,5 +1,13 @@
 #include "lists.h"
 
+/**
+ * insert_node - insert a new node into a sorted singly linked list
+ * @head: double pointer to the head of the list
+ * @number: the value to insert
+ *
+ * Return: pointer to the new node or NULL if it fails
+ */
+
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new;
