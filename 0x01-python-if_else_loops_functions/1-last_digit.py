@@ -4,11 +4,11 @@ number = random.randint(-10000, 10000)
 
 if number < 0:
     temp = number * -1
-    lastDigit = temp % 10
+    lastDigit = (temp % 10) * -1
 else:
     lastDigit = number % 10
 
-if lastDigit >= 5:
+if lastDigit > 5:
     print("Last digit of {:d} is {:d} and is greater than 5"
           .format(number, lastDigit))
 elif lastDigit == 0:
