@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def uppercase(str):
     new_str = ""
     for i in range(0, len(str)):
