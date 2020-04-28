@@ -20,30 +20,24 @@ listint_t *insert_node(listint_t **head, int number)
 		return (NULL);
 
 	new->n = number;
+	new->next = NULL;
 
-	if (number < (*head)->n)
-	{
-		new->next = (*head)->next;
-		*head = new;
-		return (new);
-	}
-
-/* Find node with n larger than number */
-	while ((number > current->n) && current->next)
-	{
-		previous = current;
-		current = current->next;
-	}
-
-	if (current->next == NULL && number >= current->n)
-	{
-		new->next = NULL;
-		current->next = new;
-	}
-	else
+	if (number < current->n || !current)
 	{
 		new->next = current;
-		previous->next = new;
+		*head = new;
+		return (*head);
 	}
-	return (new);
+
+	while (current)
+	{
+		if (!current->next || new->n < current->next->n)
+		{
+			new->next = current->next;
+			current->next = new;
+			return (current);
+		}
+		current = current->next;
+	}
+	return (NULL);
 }
