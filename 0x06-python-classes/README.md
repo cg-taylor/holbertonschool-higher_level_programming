@@ -20,7 +20,7 @@ This project introduces object oriented programming (OOP) to the students at Hol
 - What is the Pythonic way to write getters and setters
 - How to dynamically create arbitrary new attributes for existing instances of a class
 - How to bind attributes to objects and classes
-- What is and what does contain `__dict__` of a class and of an instance of a class
+- What is and what does `__dict__` of a class and of an instance of a class contain
 - How does Python find attributes of an object or class
 - How to use the `getattr` function
 
