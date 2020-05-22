@@ -42,26 +42,31 @@ Starting from today:
 ## Files
 0-add_integer.py:
 	Adds two numbers (handles integers and floats)
+
 /test/0-add_integer.txt:
 	doctest file for 0-add_integer.py
 
 2-matrix_divided.py:
 	Divides all elements of a matrix by a non-zero divisor
+
 /test/2-matrix_divided.txt:
 	dcotest file for 2-matrix_divided.py
 
 3-say_my_name.py:
 	Prints a sentence with a first and last name
+
 /test/3-say_my_name.txt:
 	doctest file for 3-say_my_name.py
 
 4-print_square.py:
 	Prints a square of size `size` using the `#` character
+
 /test/4-print_square.txt:
 	doctest file for 4-print_square.py
 
 5-text_indentation.py:
 	Print a block of text with two new lines after each `.`, `?`, and `:`
+
 /test/5-text_indentation.txt:
 	doctest file for 5-text_indentation.py
 
