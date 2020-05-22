@@ -57,7 +57,7 @@ Starting from today:
 
 **tests/**:
 	Contains all doctest and unittest files
-
+<p>
 The following files are doctest files for the corresponding Python script above:
 - 0-add_integer.txt
 - 2-matrix_divided.txt
@@ -65,6 +65,6 @@ The following files are doctest files for the corresponding Python script above:
 - 4-print_square.txt
 - 5-text_indentation.txt
 
-
 6-max_integer_test.py:
 	Unittests for the max_integer function, which locates the largest integer in a list of integers
+</p>
