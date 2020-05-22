@@ -59,11 +59,11 @@ Starting from today:
 	Contains all doctest and unittest files
 
 The following files are doctest files for the corresponding Python script above:
-	- 0-add_integer.txt
-	- 2-matrix_divided.txt
-	- 3-say_my_name.txt
-	- 4-print_square.txt
-	- 5-text_indentation.txt
+- 0-add_integer.txt
+- 2-matrix_divided.txt
+- 3-say_my_name.txt
+- 4-print_square.txt
+- 5-text_indentation.txt
 
 
 6-max_integer_test.py:
