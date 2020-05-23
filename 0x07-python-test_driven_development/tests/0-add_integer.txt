@@ -1,0 +1,55 @@
+The ``0-add_integers`` module
+=============================
+
+Using ``add_integers``
+----------------------
+
+Import add_integers from 0-add_integers
+       >>> add_integers = __import('0-add_integers').add_integers
+
+Test 1: a or b is an invalid argument (not  an int or float)
+     >>> add_integers('a', 9)
+     	 Traceback (most recent call last):
+	 TypeError: a must be an integer
+
+     >>> add_integers(9, 'beta')
+     	 Traceback (most recent call last):
+	 TypeError: b must be an integer
+
+Test 2: only one argument
+     a = None, b is passed
+     >> add_integers(None, 5)
+     	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+     a is passed, default b is used
+     >>> add_integers(22)
+     	 120
+
+Test 3: negative numbers
+     negative + positive
+     >>> add_integers(-12, 10)
+     ... add_integers(27, -14)
+     	 -2
+	 13
+
+     negative + negative
+     >>> add_integers(-4, -8)
+     	 -12
+
+Test 4: float + int
+     >>> add_integers(12.5, 4)
+     ... add_integers(50, 48.9)
+     	 16
+	 98
+
+Test 5: no arguments are passed
+     >>> add_integers(None)
+     	 Traceback (most recent call last):
+     	 ValueError: a must be an integer
+
+Test 6: both numbers are floats
+     >>> add_integers(51.8, 49.9)
+     ... add_integers(0.1, -0.1)
+     	 100
+	 0
