@@ -1,0 +1,107 @@
+''7-base-geometry'' module
+==========================
+
+Using ''7-base_geometry'':
+--------------------------
+
+Import function:
+       >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Test 0: class is type BaseGeometry
+     >>> test = BaseGeometry()
+     >>> type(test) == BaseGeometry
+     True
+
+Test 1: undefined area method is an instance method
+     >>> type(BaseGeometry.__dict__['area'])
+     <class 'function'>
+
+Test 2: integer_validator method is an instance method
+     >>> type(BaseGeometry.__dict__['integer_validator'])
+     <class 'function'>
+
+Test 3: undefined area method normal behavior
+     >>> test.area()
+     Traceback (most recent call last):
+     Exception: area() is not implemented
+
+Test 4: no arguments passed to area
+     >>> test.__class__.area()
+     Traceback (most recent call last):
+     TypeError: area() missing 1 required positional argument: 'self'
+
+Test 5: extra argument(s) passed to area
+     >>> test.area(3)
+     Traceback (most recent call last):
+     TypeError: area() takes 1 positional argument but 2 were given
+
+     >>> test.area(9, 8)
+     Traceback (most recent call last):
+     TypeError: area() takes 1 positional argument but 3 were given
+
+Test 6: integer_validator method normal behavior
+     >>> test.integer_validator("size", 8)
+
+Test 7: no arguments passed to integer_validator
+Called via class
+     >>> test.__class__.integer_validator()
+     Traceback (most recent call last):
+     TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+Called via instance
+    >>> test.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test 8: extra arguments passed to integer_validator
+    >>> test.integer_validator(1, 3, 9)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Test 9: float value passed to integer_validator
+     >>> test.integer_validator("number", 13.8)
+     Traceback (most recent call last):
+     TypeError: number must be an integer
+
+Test 10: string passed to integer_validator
+     >>> test.integer_validator("number", "twelve")
+     Traceback (most recent call last):
+     TypeError: number must be an integer
+
+Test 11: give it None instead of a value
+     >>> test.integer_validator("boogie", None)
+     Traceback (most recent call last):
+     TypeError: boogie must be an integer
+
+Test 12: send it True instead of a value
+     >>> test.integer_validator("dude", True)
+     Traceback (most recent call last):
+     TypeError: dude must be an integer
+
+Test 13: pass it a list
+     >>> test.integer_validator("list", [1, 5, 3])
+     Traceback (most recent call last):
+     TypeError: list must be an integer
+
+Test 14: how about a tuple?
+     >>> test.integer_validator("tup", (2, 3, 4))
+     Traceback (most recent call last):
+     TypeError: tup must be an integer
+
+Test 15: what about a dictionary?
+     >>> test.integer_validator("dictionary", {1, 3})
+     Traceback (most recent call last):
+     TypeError: dictionary must be an integer
+
+Test 16: pass it 0
+     >>> test.integer_validator("nada", 0)
+     Traceback (most recent call last):
+     ValueError: nada must be greater than 0
+
+Test 17: give it a negative int
+     >>> test.integer_validator("nada", -8)
+     Traceback (most recent call last):
+     ValueError: nada must be greater than 0
+
+Test 18: empty string as the name ok?
+     >>> test.integer_validator("", 5)
