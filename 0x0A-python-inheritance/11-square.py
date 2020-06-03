@@ -49,6 +49,7 @@ class Rectangle(BaseGeometry):
         """str rep method for Rectangle"""
         return "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
 
+
 class Square(Rectangle):
     """Define subclass Square, which inherits from Rectangle"""
 
