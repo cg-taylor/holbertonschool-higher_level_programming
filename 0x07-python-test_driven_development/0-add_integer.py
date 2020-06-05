@@ -12,14 +12,14 @@ def add_integer(a, b=98):
         TypeError: if a or b is not an integer
     """
 
-    if type(a) is not [int, float]:
+    if type(a) not in (float, int):
         raise TypeError('a must be an integer')
-    elif type(a) is float:
-        a = int(a)
 
-    if type(b) is not [int, float]:
+    if type(b) not in (float, int):
         raise TypeError('b must be an integer')
-    elif type(b) is float:
-        b = int(b)
 
-    return a + b
+    return int(a) + int(b)
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/0-add_integer.txt")
