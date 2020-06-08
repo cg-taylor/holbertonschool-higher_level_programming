@@ -1,0 +1,11 @@
+Task 1: Base class
+-
+
+Task 2: First rectangle
+- Rectangle is an instance of Base
+- Rectangle 
+
+Task 3:
+- all variables are integers
+- width, height > 0
+- x, y >= 0
