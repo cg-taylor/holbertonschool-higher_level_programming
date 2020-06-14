@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if type(a_dictionary) is not dict:
+    if a_dictionary is None:
         return None
     best = 0
-    for name in a_dictionary.keys():
-        if a_dictionary[name] > best:
-            best = a_dictionary[name]
-            star = name
-    return star
+    best_name = None
+    for name, score in a_dictionary.items():
+        if score > best:
+            best = score
+            best_name = name
+    return best_name
